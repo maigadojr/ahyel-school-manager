@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta name="theme-color" content="#1e3a8a">
+
+  <title>AHYEL School Management System</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOGIN BOX -->
+  <div class="login-box" id="loginBox">
+
+    <h1>WELCOME TO AHYEL</h1>
+
+    <h2 class="login-subtitle">
+      School Management System App
+    </h2>
+
+    <p>Login to continue</p>
+
+    <input 
+      type="text"
+      id="username"
+      placeholder="Username"
+      autocomplete="off"
+    >
+
+    <input 
+      type="password"
+      id="password"
+      placeholder="Password"
+      autocomplete="off"
+    >
+
+    <button onclick="login()">
+      Login
+    </button>
+
+    <p id="loginError"></p>
+
+  </div>
+
+  <!-- MAIN APP -->
+  <div 
+    id="appContent"
+    class="app-container"
+    style="display:none;"
+  >
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+
+      <button 
+        class="menu-btn"
+        onclick="toggleSidebar()"
+      >
+        ☰
+      </button>
+
+    </header>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <button 
+        class="close-btn"
+        onclick="toggleSidebar()"
+      >
+        ×
+      </button>
+
+      <h2>School Panel</h2>
+
+      <a href="#">Dashboard</a>
+
+      <a href="#">Students</a>
+
+      <a href="#">Attendance</a>
+
+      <a href="#">Settings</a>
+
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <h1>AHYEL School Manager</h1>
+
+      <p>Ahyel School Management System</p>
+
+      <div class="header-buttons">
+
+        <button 
+          class="logout-btn"
+          onclick="logout()"
+        >
+          Logout
+        </button>
+
+        <button 
+          onclick="toggleDarkMode()"
+          class="dark-btn"
+        >
+          Dark Mode
+        </button>
+
+        <button 
+          onclick="exportPDF()"
+          class="pdf-btn"
+        >
+          Export PDF
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+      <!-- STATS -->
+      <div class="stats-container">
+
+        <div class="card">
+          <h2>Total Students</h2>
+          <p id="studentCount">0</p>
+        </div>
+
+        <div class="card">
+          <h2>Present</h2>
+          <p id="presentCount">0</p>
+        </div>
+
+        <div class="card">
+          <h2>Absent</h2>
+          <p id="absentCount">0</p>
+        </div>
+
+      </div>
+
+      <!-- FORM -->
+      <div class="form-box">
+
+        <h2>Add Student</h2>
+
+        <input
+          type="text"
+          id="studentName"
+          placeholder="Student Name"
+        >
+
+        <input
+          type="text"
+          id="studentClass"
+          placeholder="Student Class"
+        >
+
+        <input
+          type="file"
+          id="studentPhoto"
+          accept="image/*"
+        >
+
+        <button onclick="addStudent()">
+          Add Student
+        </button>
+
+      </div>
+
+      <!-- STUDENT LIST -->
+      <div class="list-box">
+
+        <h2>Student List</h2>
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search Student..."
+          onkeyup="searchStudent()"
+        >
+
+        <ul id="studentList"></ul>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- PDF LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
