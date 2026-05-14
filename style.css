@@ -358,3 +358,16 @@ li{
     padding:9px 8px;
   }
 }
+
+.footer{
+  background:#1e3a8a;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:30px;
+  font-size:14px;
+}
+
+.dark-mode .footer{
+  background:#111827;
+}
