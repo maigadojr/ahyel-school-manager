@@ -22,6 +22,22 @@ AHYEL School Manager is a simple school management web application built with HT
 ## Live Demo
 
 https://maigadojr.github.io/ahyel-school-manager/
+## App Screenshots
+
+### Login Page
+![Login Page](screenshots/login-page.jpg)
+
+### Dashboard
+![Dashboard](screenshots/dashboard.jpg)
+
+### Result System
+![Result System](screenshots/result-system.jpg)
+
+### Dark Mode
+![Dark Mode](screenshots/dark-mode.jpg)
+
+### PDF Export
+![PDF Export](screenshots/pdf-export.jpg)
 
 ## Developer
 
